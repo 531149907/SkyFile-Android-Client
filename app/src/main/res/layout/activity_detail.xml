@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/backgroundWhite"
     tools:context="work.hin.skyfileclient.view.detail.DetailActivity">
 
     <android.support.design.widget.AppBarLayout
@@ -15,12 +16,14 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:contentScrim="@color/colorPrimary"
+            app:elevation="4dp"
+            app:borderWidth="0dp"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="80dp"
+                android:layout_marginTop="75dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -35,7 +38,7 @@
 
                 <Space
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/margin_default" />
+                    android:layout_height="12dp" />
 
                 <TextView
                     android:id="@+id/file_small_title"
@@ -50,7 +53,10 @@
 
             <android.support.v7.widget.Toolbar
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="80dp"
+                android:minHeight="80dp"
+                app:elevation="4dp"
+                app:borderWidth="0dp"
                 app:layout_collapseMode="pin" />
 
         </android.support.design.widget.CollapsingToolbarLayout>
@@ -60,6 +66,7 @@
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:overScrollMode="never"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <LinearLayout
@@ -70,9 +77,9 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="14dp"
+                android:paddingBottom="12dp"
                 android:paddingLeft="@dimen/margin_default"
-                android:paddingTop="14dp"
+                android:paddingTop="12dp"
                 android:text="@string/file_detail_section_1"
                 android:textColor="@color/greyDark"
                 android:textSize="14sp" />
@@ -87,17 +94,16 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@color/itemDivider" />
+                    android:background="#efefef" />
 
                 <TableLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <TableRow
-                        android:layout_height="wrap_content">
+                    <TableRow android:layout_height="wrap_content">
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="64dp"
                             android:layout_height="36dp"
                             android:gravity="center_vertical"
                             android:paddingRight="16dp"
@@ -116,11 +122,10 @@
 
                     </TableRow>
 
-                    <TableRow
-                        android:layout_height="wrap_content">
+                    <TableRow android:layout_height="wrap_content">
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="64dp"
                             android:layout_height="36dp"
                             android:gravity="center_vertical"
                             android:paddingRight="16dp"
@@ -139,11 +144,10 @@
 
                     </TableRow>
 
-                    <TableRow
-                        android:layout_height="wrap_content">
+                    <TableRow android:layout_height="wrap_content">
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="64dp"
                             android:layout_height="36dp"
                             android:gravity="center_vertical"
                             android:paddingRight="16dp"
@@ -162,11 +166,10 @@
 
                     </TableRow>
 
-                    <TableRow
-                        android:layout_height="wrap_content">
+                    <TableRow android:layout_height="wrap_content">
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="64dp"
                             android:layout_height="36dp"
                             android:gravity="center_vertical"
                             android:paddingRight="16dp"
@@ -189,8 +192,228 @@
 
             </LinearLayout>
 
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="12dp"
+                android:paddingLeft="@dimen/margin_default"
+                android:paddingTop="12dp"
+                android:text="@string/file_detail_section_2"
+                android:textColor="@color/greyDark"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/margin_default"
+                android:paddingRight="@dimen/margin_default">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#efefef" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="64dp"
+                            android:layout_height="36dp"
+                            android:gravity="center_vertical"
+                            android:paddingRight="16dp"
+                            android:text="@string/file_detail_node_count"
+                            android:textColor="@color/greyLight"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/file_node_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="5 个节点（健康度 90%）"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                    </TableRow>
+
+                    <TableRow android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="64dp"
+                            android:layout_height="36dp"
+                            android:gravity="center_vertical"
+                            android:paddingRight="16dp"
+                            android:text="@string/file_detail_integrity"
+                            android:textColor="@color/greyLight"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/file_integrity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="良好，可恢复（92%）"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                    </TableRow>
+
+                    <TableRow android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="64dp"
+                            android:layout_height="36dp"
+                            android:gravity="center_vertical"
+                            android:paddingRight="16dp"
+                            android:text=""
+                            android:textColor="@color/greyLight"
+                            android:textSize="12sp" />
+
+                        <ImageView
+                            android:id="@+id/file_percentage"
+                            android:layout_width="match_parent"
+                            android:layout_height="6dp" />
+
+                    </TableRow>
+
+                    <TableRow android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="64dp"
+                            android:layout_height="36dp"
+                            android:gravity="center_vertical"
+                            android:paddingRight="16dp"
+                            android:text="@string/file_detail_file_shards"
+                            android:textColor="@color/greyLight"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/file_shards"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="18 块（2 块已丢失）"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                    </TableRow>
+
+                </TableLayout>
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="12dp"
+                android:paddingLeft="@dimen/margin_default"
+                android:paddingTop="12dp"
+                android:text="@string/file_detail_section_3"
+                android:textColor="@color/greyDark"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/margin_default"
+                android:paddingRight="@dimen/margin_default">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#efefef" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="64dp"
+                            android:layout_height="36dp"
+                            android:gravity="center_vertical"
+                            android:paddingRight="16dp"
+                            android:text="@string/file_detail_sha_256"
+                            android:textColor="@color/greyLight"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/file_sha_256"
+                            android:layout_width="wrap_content"
+                            android:layout_height="72dp"
+                            android:gravity="center_vertical"
+                            android:lineSpacingExtra="21sp"
+                            android:text="1589999b0ca6ef8814283026a9f166d51c70a910671c3d44049755f07f2eb910"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                    </TableRow>
+
+                    <TableRow android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="64dp"
+                            android:layout_height="36dp"
+                            android:gravity="center_vertical"
+                            android:paddingRight="16dp"
+                            android:text="@string/file_detail_root"
+                            android:textColor="@color/greyLight"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/file_root"
+                            android:layout_width="wrap_content"
+                            android:layout_height="72dp"
+                            android:gravity="center_vertical"
+                            android:lineSpacingExtra="21sp"
+                            android:text="b49f425a7e1f9cff3856329ada223f2f9d368f15a00cf48df16ca95986137fe8"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                    </TableRow>
+
+                    <TableRow android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="64dp"
+                            android:layout_height="36dp"
+                            android:gravity="center_vertical"
+                            android:paddingRight="16dp"
+                            android:text="@string/file_detail_merkle_tree"
+                            android:textColor="@color/greyLight"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/file_tree"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="查看"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                    </TableRow>
+
+                </TableLayout>
+
+            </LinearLayout>
+
         </LinearLayout>
 
     </android.support.v4.widget.NestedScrollView>
 
-</android.support.constraint.ConstraintLayout>
+</android.support.design.widget.CoordinatorLayout>

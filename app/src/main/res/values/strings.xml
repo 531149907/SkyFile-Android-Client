@@ -59,5 +59,11 @@
     <string name="file_detail_sha_256">SHA-256</string>
     <string name="file_detail_root">ROOT</string>
     <string name="file_detail_merkle_tree">M-Tree</string>
+    <string name="title_activity_home">HomeActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
 
 </resources>

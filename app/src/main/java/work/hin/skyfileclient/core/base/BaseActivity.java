@@ -28,9 +28,9 @@ public abstract class BaseActivity<V extends BaseView, T extends BasePresenter<V
 
     protected void isTransparentStatusBar(Boolean value) {
         if (value) {
-            getWindow().setStatusBarColor(getResources().getColor(R.color.statusBarTransparent));
+            getWindow().setStatusBarColor(getResources().getColor(R.color.colorTest));
         } else {
-            getWindow().setStatusBarColor(getResources().getColor(R.color.statusBar));
+            getWindow().setStatusBarColor(getResources().getColor(R.color.colorTest));
         }
     }
 

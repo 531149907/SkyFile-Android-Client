@@ -12,6 +12,7 @@ import work.hin.skyfileclient.core.base.BaseActivity;
 import work.hin.skyfileclient.core.base.BaseFragment;
 import work.hin.skyfileclient.presenter.splash.SplashPresenter;
 import work.hin.skyfileclient.util.FragmentManagement;
+import work.hin.skyfileclient.view.detail.DetailActivity;
 import work.hin.skyfileclient.view.splash.onboard.OnBoard_1;
 import work.hin.skyfileclient.view.splash.onboard.OnBoard_2;
 import work.hin.skyfileclient.view.splash.onboard.OnBoard_3;
@@ -27,7 +28,6 @@ public class SplashActivity extends BaseActivity<ViewContract, SplashPresenter> 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        isTransparentStatusBar(true);
         ButterKnife.bind(this);
 
         init();
@@ -47,7 +47,7 @@ public class SplashActivity extends BaseActivity<ViewContract, SplashPresenter> 
     @Override
     public void onNextPageClick() {
         if (fragmentIndex == TOTAL_FRAGMENTS) {
-            Intent intent = new Intent(this, SplashActivity.class);
+            Intent intent = new Intent(this, DetailActivity.class);
             startActivity(intent);
             finish();
             return;
