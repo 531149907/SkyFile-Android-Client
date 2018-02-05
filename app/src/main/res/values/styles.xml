@@ -7,21 +7,22 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:windowBackground">@color/background</item>
-        <item name="android:statusBarColor">@color/statusBar</item>
+        <item name="android:statusBarColor">@null</item>
         <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
         <item name="textColorError">@color/colorPrimary</item>
     </style>
 
     <style name="YellowColoredButtonStyle" parent="Widget.AppCompat.Button.Colored">
         <item name="android:colorButtonNormal">@color/colorAccent</item>
         <item name="android:colorAccent">@color/colorAccent</item>
-        <item name="textAppearance">@color/white</item>
+        <item name="android:textColor">@color/white</item>
     </style>
 
     <style name="WhiteColoredButtonStyle" parent="Widget.AppCompat.Button.Colored">
         <item name="android:colorButtonNormal">@color/white</item>
         <item name="android:colorAccent">@color/white</item>
-        <item name="textAppearance">@color/red</item>
+        <item name="android:textColor">@color/red</item>
     </style>
 
     <style name="FabTransparentTheme" parent="Theme.AppCompat.Light.NoActionBar">
@@ -39,7 +40,5 @@
         <item name="android:activityCloseExitAnimation">@anim/activity_alpha_out</item>-->
     </style>
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

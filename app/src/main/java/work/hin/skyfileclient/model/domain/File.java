@@ -16,6 +16,7 @@ public class File implements Parcelable {
     private String hash;
     private String health;
     private String shareIds;
+    private String uploadDate;
 
     protected File(Parcel in) {
         id = in.readInt();
@@ -26,6 +27,7 @@ public class File implements Parcelable {
         hash = in.readString();
         health = in.readString();
         shareIds = in.readString();
+        uploadDate = in.readString();
     }
 
     public static final Creator<File> CREATOR = new Creator<File>() {
@@ -104,6 +106,13 @@ public class File implements Parcelable {
         this.shareIds = shareIds;
     }
 
+    public String getUploadDate() {
+        return uploadDate;
+    }
+
+    public void setUploadDate(String uploadDate) {
+        this.uploadDate = uploadDate;
+    }
 
     @Override
     public int describeContents() {
@@ -120,5 +129,6 @@ public class File implements Parcelable {
         parcel.writeString(hash);
         parcel.writeString(health);
         parcel.writeString(shareIds);
+        parcel.writeString(uploadDate);
     }
 }

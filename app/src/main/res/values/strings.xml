@@ -46,6 +46,9 @@
     <string name="fab_list_other">其他</string>
 
     <!--File detail-->
+    <string name="file_detail_section_1">基本信息</string>
+    <string name="file_detail_section_2">存储信息</string>
+    <string name="file_detail_section_3">节点分布</string>
     <string name="file_detail_file_name">文件名</string>
     <string name="file_detail_file_size">大小</string>
     <string name="file_detail_upload_date">上传日期</string>

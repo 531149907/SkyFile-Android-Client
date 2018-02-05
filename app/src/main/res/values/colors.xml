@@ -5,9 +5,9 @@
     <color name="colorAccent">#FF9D6C</color>
 
     <color name="statusBar">#20627E</color>
-    <color name="statusBarTransparent">#33000000</color>
+    <color name="statusBarTransparent">#00000000</color>
 
-    <color name="backgroundGrey">#F5F5F5</color>
+    <color name="background">#F5F5F5</color>
     <color name="backgroundWhite">#FFFFFF</color>
     <color name="backgroundTransparent">#bbffffff</color>
 
