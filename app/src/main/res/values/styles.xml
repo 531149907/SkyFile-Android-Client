@@ -1,0 +1,45 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:statusBarColor">@color/statusBar</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="textColorError">@color/colorPrimary</item>
+    </style>
+
+    <style name="YellowColoredButtonStyle" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:colorButtonNormal">@color/colorAccent</item>
+        <item name="android:colorAccent">@color/colorAccent</item>
+        <item name="textAppearance">@color/white</item>
+    </style>
+
+    <style name="WhiteColoredButtonStyle" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:colorButtonNormal">@color/white</item>
+        <item name="android:colorAccent">@color/white</item>
+        <item name="textAppearance">@color/red</item>
+    </style>
+
+    <style name="FabTransparentTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@color/backgroundTransparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:statusBarColor">@color/statusBar</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <!--<item name="android:activityOpenExitAnimation">@anim/activity_alpha_out</item>
+        <item name="android:activityCloseExitAnimation">@anim/activity_alpha_out</item>-->
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>

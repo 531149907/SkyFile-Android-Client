@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#246E8D</color>
+    <color name="colorPrimaryDark">#33000000</color>
+    <color name="colorAccent">#FF9D6C</color>
+
+    <color name="statusBar">#20627E</color>
+    <color name="statusBarTransparent">#33000000</color>
+
+    <color name="backgroundGrey">#F5F5F5</color>
+    <color name="backgroundWhite">#FFFFFF</color>
+    <color name="backgroundTransparent">#bbffffff</color>
+
+    <color name="cardBorder">#EBEBEB</color>
+    <color name="itemDivider">#EFEFEF</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#4C4C4C</color>
+    <color name="cyan">#7DC3CB</color>
+    <color name="greyLight">#AEAEAE</color>
+    <color name="greyDark">#989898</color>
+    <color name="blueLight">#246E8D</color>
+    <color name="blueDark">#02334A</color>
+    <color name="red">#FF8585</color>
+
+    <color name="colorTest">#EEFF00</color>
+</resources>

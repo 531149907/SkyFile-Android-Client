@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">SkyFileClient</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--Title-->
+    <string name="main_home_title">所有文件</string>
+    <string name="main_upload_title">上传</string>
+
+    <!--Splash onboarding text-->
+    <string name="onboard_title_small_1">存储空间，无限扩大</string>
+    <string name="onboard_title_big_1">世界有多大，空间便多大</string>
+    <string name="onboard_title_text_1">采用分布式的云存储服务，世界上每台电脑的空闲硬盘，都可以随时为你服务。是的，你也可以提供存储服务给其他人，共享存储新世界。</string>
+    <string name="onboard_title_small_2">区块链，保证文件安全可靠</string>
+    <string name="onboard_title_big_2">区块链技术，你也参与其中</string>
+    <string name="onboard_title_text_2">使用 Merkle Tree 区块链算法，利用 SHA-256 算法 确定文件指纹，你的每份文件都拥有独一无二的标志，严防篡改。</string>
+    <string name="onboard_title_small_3">文件恢复，一样保证</string>
+    <string name="onboard_title_big_3">没错，文件缺失也能恢复</string>
+    <string name="onboard_title_text_3">我们无法保证为你提供存储服务提供商的可靠性，采用分散式与 EC 纠删算法，即使丢失部分，依然能够恢复出你的原始文件。</string>
+
+    <!--SideNav list-->
+    <string name="sidenav_list_1">云存储</string>
+    <string name="sidenav_list_2">通知 &amp; 消息</string>
+    <string name="sidenav_list_3">服务购买</string>
+    <string name="sidenav_list_4">设置</string>
+    <string name="sidenav_list_5">分布式服务状况</string>
+
+    <!--Upload status fragments-->
+    <string name="upload_status_title_1">文件加密中</string>
+    <string name="upload_status_text_1">正在透过 SkyFile 服务端进行加密，采用 AES-256-CBC 模式，请稍等。</string>
+    <string name="upload_status_title_2">文件分块中</string>
+    <string name="upload_status_text_2">通过文件分块，可将文件损坏的可能性大幅下降，始终保证文件的完整性。</string>
+    <string name="upload_status_title_3">文件编码中</string>
+    <string name="upload_status_text_3">使用 Erasure coding （Reel-Solomon）算法编码方式，形成冗余数据校验数据，即使丢失部分也能恢复成功。</string>
+    <string name="upload_status_title_4">存储至节点中</string>
+    <string name="upload_status_text_4">文件处理完毕，正在联系Node Manager进行节点存储任务分发，使用区块链 Merkle Tree 算法用于文件验证。</string>
+    <string name="upload_status_title_5">上传成功</string>
+    <string name="upload_status_text_5">文件存储完毕，SkyFile 服务器端文件缓冲池中的数据已经被清除，以提高安全性。</string>
+
+    <!--Fab list-->
+    <string name="fab_list_pdf">PDF 文档</string>
+    <string name="fab_list_office">Office 系列文档</string>
+    <string name="fab_list_photo_and_video">图片、视频</string>
+    <string name="fab_list_text_message">文字消息</string>
+    <string name="fab_list_other">其他</string>
+
+    <!--File detail-->
+    <string name="file_detail_file_name">文件名</string>
+    <string name="file_detail_file_size">大小</string>
+    <string name="file_detail_upload_date">上传日期</string>
+    <string name="file_detail_password_protect">密码保护</string>
+    <string name="file_detail_node_count">节点数</string>
+    <string name="file_detail_integrity">完整度</string>
+    <string name="file_detail_file_shards">文件块</string>
+    <string name="file_detail_sha_256">SHA-256</string>
+    <string name="file_detail_root">ROOT</string>
+    <string name="file_detail_merkle_tree">M-Tree</string>
+
+</resources>
