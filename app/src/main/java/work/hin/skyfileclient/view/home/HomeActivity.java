@@ -1,5 +1,6 @@
 package work.hin.skyfileclient.view.home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.FloatingActionButton;
@@ -19,6 +20,7 @@ import butterknife.ButterKnife;
 import work.hin.skyfileclient.R;
 import work.hin.skyfileclient.core.base.BaseActivity;
 import work.hin.skyfileclient.presenter.home.HomePresenter;
+import work.hin.skyfileclient.view.fab.FabActivity;
 
 public class HomeActivity extends BaseActivity<ViewContract, HomePresenter> implements ViewContract {
     @BindView(R.id.appbar_layout)
@@ -97,6 +99,7 @@ public class HomeActivity extends BaseActivity<ViewContract, HomePresenter> impl
 
     @Override
     public void onClick(View view) {
+        Intent intent;
         switch (view.getId()) {
             case R.id.list_item_cart:
                 break;
@@ -109,6 +112,9 @@ public class HomeActivity extends BaseActivity<ViewContract, HomePresenter> impl
             case R.id.list_item_settings:
                 break;
             case R.id.fab:
+                intent = new Intent(this, FabActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.fab_activity_alpha_in, R.anim.fab_activity_alpha_out);
                 break;
         }
     }

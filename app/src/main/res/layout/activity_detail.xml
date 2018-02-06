@@ -15,9 +15,9 @@
         <android.support.design.widget.CollapsingToolbarLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            app:borderWidth="0dp"
             app:contentScrim="@color/colorPrimary"
             app:elevation="4dp"
-            app:borderWidth="0dp"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
             <LinearLayout
@@ -31,6 +31,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="72dp"
+                    android:alpha="0"
                     android:maxLines="1"
                     android:text="2017年度工作汇报"
                     android:textColor="@color/white"
@@ -45,6 +46,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="72dp"
+                    android:alpha="0"
                     android:maxLines="1"
                     android:text="6.5 MB · DOCX · 2018/2/10"
                     android:textColor="#98c3d5"
@@ -52,12 +54,16 @@
             </LinearLayout>
 
             <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_marginTop="25dp"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:minHeight="80dp"
-                app:elevation="4dp"
+                android:layout_height="55dp"
+                android:minHeight="55dp"
                 app:borderWidth="0dp"
-                app:layout_collapseMode="pin" />
+                app:elevation="4dp"
+                app:layout_collapseMode="pin"
+                app:navigationIcon="@drawable/ic_arrow_back"
+                app:titleTextColor="@color/white" />
 
         </android.support.design.widget.CollapsingToolbarLayout>
 
@@ -70,11 +76,14 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <LinearLayout
+            android:alpha="0"
+            android:id="@+id/content_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/section_1_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingBottom="12dp"
@@ -92,6 +101,7 @@
                 android:paddingRight="@dimen/margin_default">
 
                 <ImageView
+                    android:id="@+id/section_1_divider"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:background="#efefef" />
@@ -100,7 +110,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <TableRow android:layout_height="wrap_content">
+                    <TableRow
+                        android:id="@+id/section_1_1"
+                        android:layout_height="wrap_content">
 
                         <TextView
                             android:layout_width="64dp"
@@ -122,7 +134,9 @@
 
                     </TableRow>
 
-                    <TableRow android:layout_height="wrap_content">
+                    <TableRow
+                        android:id="@+id/section_1_2"
+                        android:layout_height="wrap_content">
 
                         <TextView
                             android:layout_width="64dp"
@@ -144,7 +158,9 @@
 
                     </TableRow>
 
-                    <TableRow android:layout_height="wrap_content">
+                    <TableRow
+                        android:id="@+id/section_1_3"
+                        android:layout_height="wrap_content">
 
                         <TextView
                             android:layout_width="64dp"
@@ -166,7 +182,9 @@
 
                     </TableRow>
 
-                    <TableRow android:layout_height="wrap_content">
+                    <TableRow
+                        android:id="@+id/section_1_4"
+                        android:layout_height="wrap_content">
 
                         <TextView
                             android:layout_width="64dp"
@@ -197,8 +215,10 @@
                 android:layout_height="10dp" />
 
             <TextView
+                android:id="@+id/section_2_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+
                 android:paddingBottom="12dp"
                 android:paddingLeft="@dimen/margin_default"
                 android:paddingTop="12dp"
@@ -214,15 +234,19 @@
                 android:paddingRight="@dimen/margin_default">
 
                 <ImageView
+                    android:id="@+id/section_2_divider"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
+
                     android:background="#efefef" />
 
                 <TableLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <TableRow android:layout_height="wrap_content">
+                    <TableRow
+                        android:id="@+id/section_2_1"
+                        android:layout_height="wrap_content">
 
                         <TextView
                             android:layout_width="64dp"
@@ -244,7 +268,9 @@
 
                     </TableRow>
 
-                    <TableRow android:layout_height="wrap_content">
+                    <TableRow
+                        android:id="@+id/section_2_2"
+                        android:layout_height="wrap_content">
 
                         <TextView
                             android:layout_width="64dp"
@@ -266,7 +292,9 @@
 
                     </TableRow>
 
-                    <TableRow android:layout_height="wrap_content">
+                    <TableRow
+                        android:id="@+id/section_2_3"
+                        android:layout_height="wrap_content">
 
                         <TextView
                             android:layout_width="64dp"
@@ -284,7 +312,9 @@
 
                     </TableRow>
 
-                    <TableRow android:layout_height="wrap_content">
+                    <TableRow
+                        android:id="@+id/section_2_4"
+                        android:layout_height="wrap_content">
 
                         <TextView
                             android:layout_width="64dp"
@@ -315,8 +345,10 @@
                 android:layout_height="10dp" />
 
             <TextView
+                android:id="@+id/section_3_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+
                 android:paddingBottom="12dp"
                 android:paddingLeft="@dimen/margin_default"
                 android:paddingTop="12dp"
@@ -332,15 +364,19 @@
                 android:paddingRight="@dimen/margin_default">
 
                 <ImageView
+                    android:id="@+id/section_3_divider"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
+
                     android:background="#efefef" />
 
                 <TableLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <TableRow android:layout_height="wrap_content">
+                    <TableRow
+                        android:id="@+id/section_3_1"
+                        android:layout_height="wrap_content">
 
                         <TextView
                             android:layout_width="64dp"
@@ -363,7 +399,9 @@
 
                     </TableRow>
 
-                    <TableRow android:layout_height="wrap_content">
+                    <TableRow
+                        android:id="@+id/section_3_2"
+                        android:layout_height="wrap_content">
 
                         <TextView
                             android:layout_width="64dp"
@@ -386,7 +424,9 @@
 
                     </TableRow>
 
-                    <TableRow android:layout_height="wrap_content">
+                    <TableRow
+                        android:id="@+id/section_3_3"
+                        android:layout_height="wrap_content">
 
                         <TextView
                             android:layout_width="64dp"
@@ -412,8 +452,49 @@
 
             </LinearLayout>
 
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="76dp" />
         </LinearLayout>
 
     </android.support.v4.widget.NestedScrollView>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bottom_button_section">
+
+        <TableRow
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_default">
+
+            <Button
+                android:id="@+id/delete_btn"
+                style="@style/WhiteColoredButtonStyle"
+                android:layout_marginBottom="@dimen/margin_default"
+                android:layout_marginLeft="@dimen/margin_default"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:height="56dp"
+                android:backgroundTint="@color/white"
+                android:text="删除"
+                android:textColor="@color/red" />
+
+            <Button
+                android:id="@+id/download_btn"
+                style="@style/YellowColoredButtonStyle"
+                android:layout_marginBottom="@dimen/margin_default"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="@dimen/margin_default"
+                android:layout_weight="1"
+                android:height="56dp"
+                android:text="下载"
+                android:textColor="@color/white" />
+        </TableRow>
+
+    </TableLayout>
 
 </android.support.design.widget.CoordinatorLayout>

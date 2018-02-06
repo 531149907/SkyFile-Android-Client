@@ -7,4 +7,5 @@ import work.hin.skyfileclient.core.base.BaseView;
  */
 
 public interface ViewContract extends BaseView {
+    void updateView(int processIndex);
 }

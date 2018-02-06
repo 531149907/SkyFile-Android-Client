@@ -14,7 +14,7 @@
             android:theme="@style/AppTheme" />
         <activity
             android:name=".view.detail.DetailActivity"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme"></activity>
         <activity
             android:name=".view.home.HomeActivity"
             android:label="@string/title_activity_home"
@@ -25,7 +25,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.upload.UploadActivity"></activity>
+        <activity android:name=".view.upload.UploadActivity" />
+        <activity
+            android:name=".view.fab.FabActivity"
+            android:theme="@style/FabTransparentTheme"></activity>
     </application>
 
 </manifest>

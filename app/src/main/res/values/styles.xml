@@ -31,7 +31,7 @@
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowBackground">@color/backgroundTransparent</item>
         <item name="android:windowContentOverlay">@null</item>
-        <item name="android:statusBarColor">@color/statusBar</item>
+        <item name="android:statusBarColor">#27000000</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowIsFloating">false</item>
         <item name="android:backgroundDimEnabled">false</item>

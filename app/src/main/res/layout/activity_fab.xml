@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="work.hin.skyfileclient.view.fab.FabActivity">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/label_other"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/fab_other"
+        android:layout_marginRight="@dimen/margin_default"
+        android:layout_marginTop="2dp"
+        android:layout_toLeftOf="@id/fab_other"
+        android:alpha="0">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="其他"
+            android:textColor="@color/black" />
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/label_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/fab_text"
+        android:layout_marginRight="@dimen/margin_default"
+        android:layout_marginTop="2dp"
+        android:layout_toLeftOf="@id/fab_text"
+        android:alpha="0">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="文字消息"
+            android:textColor="@color/black" />
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/label_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/fab_photo"
+        android:layout_marginRight="@dimen/margin_default"
+        android:layout_marginTop="2dp"
+        android:layout_toLeftOf="@id/fab_photo"
+        android:alpha="0">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="图片、视频"
+            android:textColor="@color/black" />
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/label_office"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/fab_office"
+        android:layout_marginRight="@dimen/margin_default"
+        android:layout_marginTop="2dp"
+        android:layout_toLeftOf="@id/fab_office"
+        android:alpha="0">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="Office 系列文档"
+            android:textColor="@color/black" />
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/label_pdf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/fab_pdf"
+        android:layout_marginRight="@dimen/margin_default"
+        android:layout_marginTop="2dp"
+        android:layout_toLeftOf="@id/fab_pdf"
+        android:alpha="0">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="PDF 文档"
+            android:textColor="@color/black" />
+    </android.support.v7.widget.CardView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_other"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/fab_text"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="24dp"
+        android:alpha="0"
+        android:clickable="true"
+        android:focusable="true"
+        android:transformPivotX="20dp"
+        android:transformPivotY="40dp"
+        app:borderWidth="0dp"
+        app:fabSize="mini"
+        app:pressedTranslationZ="12dp"
+        app:srcCompat="@drawable/ic_fab_other" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/fab_photo"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="24dp"
+        android:alpha="0"
+        android:clickable="true"
+        android:focusable="true"
+        android:transformPivotX="20dp"
+        android:transformPivotY="40dp"
+        app:borderWidth="0dp"
+        app:fabSize="mini"
+        app:pressedTranslationZ="12dp"
+        app:srcCompat="@drawable/ic_fab_text" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/fab_office"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="24dp"
+        android:alpha="0"
+        android:clickable="true"
+        android:focusable="true"
+        android:transformPivotX="20dp"
+        android:transformPivotY="40dp"
+        app:borderWidth="0dp"
+        app:fabSize="mini"
+        app:pressedTranslationZ="12dp"
+        app:srcCompat="@drawable/ic_fab_photo" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_office"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/fab_pdf"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="24dp"
+        android:alpha="0"
+        android:clickable="true"
+        android:focusable="true"
+        android:transformPivotX="20dp"
+        android:transformPivotY="40dp"
+        app:borderWidth="0dp"
+        app:fabSize="mini"
+        app:pressedTranslationZ="12dp"
+        app:srcCompat="@drawable/ic_fab_office" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_pdf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/main_fab"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="24dp"
+        android:alpha="0"
+        android:clickable="true"
+        android:focusable="true"
+        android:transformPivotX="20dp"
+        android:transformPivotY="40dp"
+        app:borderWidth="0dp"
+        app:fabSize="mini"
+        app:pressedTranslationZ="12dp"
+        app:srcCompat="@drawable/ic_fab_pdf" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/main_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/margin_default"
+        android:layout_marginEnd="@dimen/margin_default"
+        android:clickable="true"
+        android:focusable="true"
+        app:borderWidth="0dp"
+        app:fabSize="normal"
+        app:pressedTranslationZ="12dp"
+        app:srcCompat="@drawable/ic_add" />
+
+</RelativeLayout>
