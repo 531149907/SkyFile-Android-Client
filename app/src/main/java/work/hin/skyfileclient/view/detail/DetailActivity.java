@@ -59,31 +59,32 @@ public class DetailActivity extends BaseActivity<ViewContract, DetailPresenter> 
     }
 
     private void startAnimation() {
-        ObjectAnimator oa1 = ObjectAnimator.ofFloat(bigTitle, "translationY", 100, 0);
+        ObjectAnimator oa1 = ObjectAnimator.ofFloat(bigTitle, "translationY", 200, 0);
         ObjectAnimator oa2 = ObjectAnimator.ofFloat(bigTitle, "alpha", 0, 1);
-        ObjectAnimator oa3 = ObjectAnimator.ofFloat(smallTitle, "translationY", 100, 0);
+        ObjectAnimator oa3 = ObjectAnimator.ofFloat(smallTitle, "translationY", 150, 0);
         ObjectAnimator oa4 = ObjectAnimator.ofFloat(smallTitle, "alpha", 0, 1);
         ObjectAnimator oa5 = ObjectAnimator.ofFloat(contentLayout, "translationY", 100, 0);
         ObjectAnimator oa6 = ObjectAnimator.ofFloat(contentLayout, "alpha", 0, 1);
 
-        oa1.setDuration(450);
-        oa2.setDuration(450);
-        oa3.setDuration(400);
-        oa4.setDuration(400);
-        oa5.setDuration(350);
-        oa6.setDuration(350);
+        oa1.setDuration(600);
+        oa2.setDuration(600);
+        oa3.setDuration(500);
+        oa4.setDuration(500);
+        oa5.setDuration(400);
+        oa6.setDuration(400);
 
         oa1.setStartDelay(100);
         oa2.setStartDelay(100);
-        oa3.setStartDelay(150);
-        oa4.setStartDelay(150);
-        oa5.setStartDelay(200);
-        oa6.setStartDelay(200);
+        oa3.setStartDelay(200);
+        oa4.setStartDelay(200);
+        oa5.setStartDelay(300);
+        oa6.setStartDelay(300);
 
 
         AnimatorSet set = new AnimatorSet();
         set.playTogether(oa1, oa2, oa3, oa4, oa5, oa6);
         set.setInterpolator(new DecelerateInterpolator(1.2f));
+        set.setStartDelay(50);
         set.start();
     }
 }

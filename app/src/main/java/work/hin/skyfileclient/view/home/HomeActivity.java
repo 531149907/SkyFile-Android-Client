@@ -4,10 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -15,12 +15,21 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TableRow;
 
+import java.util.HashMap;
+import java.util.List;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import work.hin.skyfileclient.R;
 import work.hin.skyfileclient.core.base.BaseActivity;
+import work.hin.skyfileclient.model.domain.File;
+import work.hin.skyfileclient.model.domain.UploadItem;
 import work.hin.skyfileclient.presenter.home.HomePresenter;
+import work.hin.skyfileclient.view.detail.DetailActivity;
 import work.hin.skyfileclient.view.fab.FabActivity;
+import work.hin.skyfileclient.view.home.adapter.FileListAdapter;
+import work.hin.skyfileclient.view.home.adapter.UploadListAdapter;
+import work.hin.skyfileclient.view.upload.UploadActivity;
 
 public class HomeActivity extends BaseActivity<ViewContract, HomePresenter> implements ViewContract {
     @BindView(R.id.appbar_layout)
@@ -39,10 +48,15 @@ public class HomeActivity extends BaseActivity<ViewContract, HomePresenter> impl
     TableRow navItemNotice;
     @BindView(R.id.list_item_settings)
     TableRow navItemSettings;
-    @BindView(R.id.recycler_view)
-    RecyclerView recyclerView;
+    @BindView(R.id.recycler_view_upload)
+    RecyclerView uploadList;
+    @BindView(R.id.recycler_view_file)
+    RecyclerView fileList;
     @BindView(R.id.fab)
     FloatingActionButton fab;
+
+    private UploadListAdapter uploadAdapter;
+    private FileListAdapter fileAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,8 +75,37 @@ public class HomeActivity extends BaseActivity<ViewContract, HomePresenter> impl
                 this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
-
         getSupportActionBar().setTitle(R.string.main_home_title);
+
+        uploadList.setNestedScrollingEnabled(false);
+        fileList.setNestedScrollingEnabled(false);
+
+        uploadAdapter = new UploadListAdapter(this);
+        uploadAdapter.addOnClickListener(new UploadListAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(UploadItem item) {
+                Intent intent = new Intent(HomeActivity.this, UploadActivity.class);
+                intent.putExtra("data", item);
+                startActivity(intent);
+            }
+        });
+        fileAdapter = new FileListAdapter(this);
+        fileAdapter.addOnClickListener(new FileListAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(File file) {
+                Intent intent = new Intent(HomeActivity.this, DetailActivity.class);
+                intent.putExtra("data", file);
+                startActivity(intent);
+            }
+        });
+
+        uploadList.setLayoutManager(new LinearLayoutManager(this));
+        uploadList.setAdapter(uploadAdapter);
+        uploadList.getItemAnimator().setChangeDuration(0);
+
+        fileList.setLayoutManager(new LinearLayoutManager(this));
+        fileList.setAdapter(fileAdapter);
+        fileList.getItemAnimator().setChangeDuration(0);
     }
 
     @Override
@@ -120,7 +163,17 @@ public class HomeActivity extends BaseActivity<ViewContract, HomePresenter> impl
     }
 
     @Override
-    public void updateFileList() {
+    public void updateFileList(HashMap<String, List<File>> data) {
+        fileAdapter.setData(data);
+    }
 
+    @Override
+    public void updateUploadList(List<UploadItem> data) {
+        uploadAdapter.setData(data);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
     }
 }

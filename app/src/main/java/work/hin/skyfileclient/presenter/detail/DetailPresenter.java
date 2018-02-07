@@ -8,15 +8,15 @@ import work.hin.skyfileclient.view.detail.ViewContract;
  */
 
 public class DetailPresenter extends BasePresenter<ViewContract> {
-    public void obtainFileBasicInfo(){
+    public void obtainFileBasicInfo() {
 
     }
 
-    public void obtainNodeInfo(){
+    public void obtainNodeInfo() {
 
     }
 
-    public void obtainStorageInfo(){
+    public void obtainStorageInfo() {
 
     }
 }

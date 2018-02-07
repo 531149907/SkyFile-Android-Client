@@ -6,5 +6,5 @@ package work.hin.skyfileclient.config.constant;
 
 public final class NET_STATIC {
     public static final String PORT = "443";
-    public static final String BASE_URL = "https://hins.work"+":"+PORT;
+    public static final String BASE_URL = "https://hins.work" + ":" + PORT;
 }

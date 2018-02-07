@@ -9,7 +9,8 @@ import work.hin.skyfileclient.config.net.RetrofitConfig;
 public class NetService {
     private static NetService service = RetrofitConfig.createService(NetService.class);
 
-    private NetService() {}
+    private NetService() {
+    }
 
     public static NetService getService() {
         return service;

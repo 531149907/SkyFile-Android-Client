@@ -7,7 +7,7 @@ import android.os.Parcelable;
  * Created by zhouzhixuan on 2018/2/5.
  */
 
-public class User implements Parcelable{
+public class User implements Parcelable {
     private int id;
     private String username;
     private String password;

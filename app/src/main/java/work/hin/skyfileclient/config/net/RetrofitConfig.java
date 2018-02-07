@@ -10,7 +10,8 @@ import static work.hin.skyfileclient.config.constant.NET_STATIC.BASE_URL;
  */
 
 public class RetrofitConfig {
-    private RetrofitConfig() {}
+    private RetrofitConfig() {
+    }
 
     private static Retrofit.Builder builder = new Retrofit.Builder()
             .baseUrl(BASE_URL)

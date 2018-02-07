@@ -6,8 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.WindowManager;
 
-import work.hin.skyfileclient.R;
-
 /**
  * Created by zhouzhixuan on 2018/2/5.
  */
@@ -24,14 +22,6 @@ public abstract class BaseActivity<V extends BaseView, T extends BasePresenter<V
                         View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         presenter = initPresenter();
-    }
-
-    protected void isTransparentStatusBar(Boolean value) {
-        if (value) {
-            getWindow().setStatusBarColor(getResources().getColor(R.color.colorTest));
-        } else {
-            getWindow().setStatusBarColor(getResources().getColor(R.color.colorTest));
-        }
     }
 
     protected <S extends View> S $(int resId) {

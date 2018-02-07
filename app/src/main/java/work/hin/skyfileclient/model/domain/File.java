@@ -17,6 +17,28 @@ public class File implements Parcelable {
     private String health;
     private String shareIds;
     private String uploadDate;
+    private String fileSize;
+
+    public File(int id, int ownerId, String fileType, String fileOriginalName, String password, String hash, String health, String shareIds, String uploadDate, String fileSize) {
+        this.id = id;
+        this.ownerId = ownerId;
+        this.fileType = fileType;
+        this.fileOriginalName = fileOriginalName;
+        this.password = password;
+        this.hash = hash;
+        this.health = health;
+        this.shareIds = shareIds;
+        this.uploadDate = uploadDate;
+        this.fileSize = fileSize;
+    }
+
+    public String getFileSize() {
+        return fileSize;
+    }
+
+    public void setFileSize(String fileSize) {
+        this.fileSize = fileSize;
+    }
 
     protected File(Parcel in) {
         id = in.readInt();
@@ -28,6 +50,7 @@ public class File implements Parcelable {
         health = in.readString();
         shareIds = in.readString();
         uploadDate = in.readString();
+        fileSize = in.readString();
     }
 
     public static final Creator<File> CREATOR = new Creator<File>() {
@@ -130,5 +153,6 @@ public class File implements Parcelable {
         parcel.writeString(health);
         parcel.writeString(shareIds);
         parcel.writeString(uploadDate);
+        parcel.writeString(fileSize);
     }
 }
