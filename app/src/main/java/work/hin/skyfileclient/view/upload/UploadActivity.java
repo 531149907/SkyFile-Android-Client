@@ -16,10 +16,11 @@ import butterknife.ButterKnife;
 import work.hin.skyfileclient.R;
 import work.hin.skyfileclient.core.base.BaseActivity;
 import work.hin.skyfileclient.presenter.upload.UploadPresenter;
+import work.hin.skyfileclient.util.LogUtil;
 
 import static work.hin.skyfileclient.config.constant.UPLOAD_STATIC.UPLOAD_CODING;
 import static work.hin.skyfileclient.config.constant.UPLOAD_STATIC.UPLOAD_ENCRYPTING;
-import static work.hin.skyfileclient.config.constant.UPLOAD_STATIC.UPLOAD_SPLITING;
+import static work.hin.skyfileclient.config.constant.UPLOAD_STATIC.UPLOAD_SPLITTING;
 import static work.hin.skyfileclient.config.constant.UPLOAD_STATIC.UPLOAD_STORING;
 import static work.hin.skyfileclient.config.constant.UPLOAD_STATIC.UPLOAD_SUCCESS;
 
@@ -53,12 +54,11 @@ public class UploadActivity extends BaseActivity<ViewContract, UploadPresenter> 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         startAnimation();
-        presenter.obtainProcessStatus();
     }
 
     @Override
     public void updateView(int processIndex) {
-        getSupportActionBar().setTitle(getString(R.string.main_upload_title) + " (" + (processIndex + 1) + "/5)");
+        getSupportActionBar().setTitle(getString(R.string.main_upload_title) + " (" + (processIndex ^ 0xa0) + "/5)");
         Drawable illustrationDrawable;
         String titleResource;
         String descriptionResource;
@@ -69,7 +69,7 @@ public class UploadActivity extends BaseActivity<ViewContract, UploadPresenter> 
                 titleResource = getString(R.string.upload_status_title_1);
                 descriptionResource = getString(R.string.upload_status_text_1);
                 break;
-            case UPLOAD_SPLITING:
+            case UPLOAD_SPLITTING:
                 illustrationDrawable = getDrawable(R.drawable.ic_illustration_file_split);
                 titleResource = getString(R.string.upload_status_title_2);
                 descriptionResource = getString(R.string.upload_status_text_2);
@@ -111,8 +111,6 @@ public class UploadActivity extends BaseActivity<ViewContract, UploadPresenter> 
         set.addListener(new AnimatorListenerAdapter() {
             @Override
             public void onAnimationEnd(Animator animation) {
-                super.onAnimationEnd(animation);
-
                 illustration.setImageDrawable(illustrationR);
                 title.setText(titleR);
                 description.setText(descriptionR);
@@ -131,16 +129,17 @@ public class UploadActivity extends BaseActivity<ViewContract, UploadPresenter> 
                 oa5.setDuration(350);
                 oa6.setDuration(350);
 
-                oa1.setStartDelay(300);
-                oa2.setStartDelay(300);
-                oa3.setStartDelay(350);
-                oa4.setStartDelay(350);
-                oa5.setStartDelay(400);
-                oa6.setStartDelay(400);
+                oa1.setStartDelay(200);
+                oa2.setStartDelay(200);
+                oa3.setStartDelay(250);
+                oa4.setStartDelay(250);
+                oa5.setStartDelay(300);
+                oa6.setStartDelay(300);
 
                 final AnimatorSet set = new AnimatorSet();
                 set.playTogether(oa1, oa2, oa3, oa4, oa5, oa6);
                 set.setInterpolator(new DecelerateInterpolator(1.2f));
+                set.setStartDelay(100);
                 set.start();
             }
         });
@@ -177,6 +176,13 @@ public class UploadActivity extends BaseActivity<ViewContract, UploadPresenter> 
         final AnimatorSet set = new AnimatorSet();
         set.playTogether(oa1, oa2, oa3, oa4, oa5, oa6);
         set.setInterpolator(new DecelerateInterpolator(1.2f));
+        set.setStartDelay(100);
         set.start();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        presenter.obtainProcessStatus();
     }
 }

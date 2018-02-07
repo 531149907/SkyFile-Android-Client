@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.WindowManager;
 
+import java.util.List;
+
 /**
  * Created by zhouzhixuan on 2018/2/5.
  */
@@ -33,6 +35,12 @@ public abstract class BaseActivity<V extends BaseView, T extends BasePresenter<V
             for (View view : views) {
                 view.setOnClickListener(this);
             }
+        }
+    }
+
+    protected <S extends View> void initListeners(@Nullable List<S> views) {
+        for (int i = 0; i < views.size(); i++) {
+            views.get(i).setOnClickListener(this);
         }
     }
 

@@ -175,5 +175,6 @@ public class HomeActivity extends BaseActivity<ViewContract, HomePresenter> impl
     @Override
     protected void onResume() {
         super.onResume();
+        presenter.refreshList();
     }
 }

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="72dp"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingTop="14dp">
+
+        <TextView
+            android:id="@+id/file_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_default"
+            android:clickable="false"
+            android:ellipsize="end"
+            android:maxWidth="270dp"
+            android:singleLine="true"
+            android:text="@string/upload_status_text_1"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/file_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="14dp"
+            android:layout_marginLeft="@dimen/margin_default"
+            android:clickable="false"
+            android:ellipsize="end"
+            android:maxWidth="280dp"
+            android:singleLine="true"
+            android:text="13.4 MB · JPEG"
+            android:textColor="@color/greyLight"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/radio_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_default"
+            android:buttonTint="@color/colorAccent"
+            android:clickable="false" />
+
+        <ImageView
+            android:id="@+id/divider_continued"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/margin_default"
+            android:layout_marginRight="@dimen/margin_default"
+            android:layout_marginTop="20dp"
+            android:alpha="0"
+            android:background="@color/itemDivider"
+            android:clickable="false" />
+
+        <ImageView
+            android:id="@+id/divider_end"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="20dp"
+            android:alpha="0"
+            android:background="@color/itemDivider"
+            android:clickable="false" />
+    </RelativeLayout>
+
+</LinearLayout>

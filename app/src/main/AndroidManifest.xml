@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="work.hin.skyfileclient">
 
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -14,7 +18,7 @@
             android:theme="@style/AppTheme" />
         <activity
             android:name=".view.detail.DetailActivity"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".view.home.HomeActivity"
             android:label="@string/title_activity_home"
@@ -28,7 +32,8 @@
         <activity android:name=".view.upload.UploadActivity" />
         <activity
             android:name=".view.fab.FabActivity"
-            android:theme="@style/FabTransparentTheme"></activity>
+            android:theme="@style/FabTransparentTheme" />
+        <activity android:name=".view.select.SelectActivity"></activity>
     </application>
 
 </manifest>
